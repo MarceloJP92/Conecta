@@ -1,0 +1,18 @@
+{
+  "name": "conecta",
+  "version": "1.0.0",
+  "description": "> Mensageiro web moderno inspirado na simplicidade dos comunicadores clássicos.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^12.15.0"
+  }
+}
