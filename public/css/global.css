@@ -1,104 +1,68 @@
-/* 
-   IMPORTAÇÃO DA FONTE
- */
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+/* =========================================================
+   global.css – Estilos globais para todas as páginas
+   ========================================================= */
 
- /* 
-    RESET
- */
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
- 
- html {
-     scroll-behavior: smooth;
- }
- 
- body {
-     font-family: 'Poppins', sans-serif;
-     background: linear-gradient(135deg, #08121F 0%, #0D1B2A 45%, #143A52 100%);
-     color: #F5F7FA;
-     min-height: 100vh;
- }
- 
- /* 
-    VARIÁVEIS
-  */
- :root {
-     --primary: #00C8FF;
-     --primary-hover: #00B2E6;
-     --background: #08121F;
-     --surface: #182235;
-     --surface-hover: #22314C;
-     --border: #2C405C;
-     --text: #F5F7FA;
-     --text-secondary: #A6B2C3;
-     --shadow: 0 12px 35px rgba(0, 0, 0, .35);
-     --radius: 16px;
-     --transition: .30s ease;
-     --max-width: 1200px;
- }
- 
- /* 
-    LINKS, IMAGENS E LISTAS
-  */
- a {
-     text-decoration: none;
-     color: inherit;
- }
- 
- img {
-     max-width: 100%;
-     display: block;
- }
- 
- ul {
-     list-style: none;
- }
- 
- /* 
-    CONTAINER
-  */
- .container {
-     width: 90%;
-     max-width: var(--max-width);
-     margin: auto;
- }
- 
- /* 
-    BOTÕES GLOBAIS (Usados no login, cadastro e na home)
-  */
- .btn-primary {
-     background: linear-gradient(90deg, #00C8FF, #009FE3);
-     padding: 16px 34px;
-     border-radius: 12px;
-     font-weight: 600;
-     transition: var(--transition);
-     color: white;
- }
- 
- .btn-primary:hover {
-     transform: translateY(-3px);
-     box-shadow: 0 15px 30px rgba(0, 200, 255, .25);
- }
- 
- .btn-secondary {
-     border: 1px solid var(--border);
-     padding: 16px 34px;
-     border-radius: 12px;
-     transition: var(--transition);
- }
- 
- .btn-secondary:hover {
-     border-color: var(--primary);
-     color: var(--primary);
- }
- 
- /* 
-    UTILITÁRIOS
-  */
- .text-center {
-     text-align: center;
- }
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+   * { margin: 0; padding: 0; box-sizing: border-box; }
+   html { scroll-behavior: smooth; }
+   
+   body {
+       font-family: 'Poppins', sans-serif;
+       background: linear-gradient(135deg, #08121F 0%, #0D1B2A 45%, #143A52 100%);
+       color: #F5F7FA;
+       min-height: 100vh;
+   }
+   
+   :root {
+       --primary: #00C8FF;
+       --primary-hover: #00B2E6;
+       --background: #08121F;
+       --surface: #182235;
+       --surface-hover: #22314C;
+       --border: #2C405C;
+       --text: #F5F7FA;
+       --text-secondary: #A6B2C3;
+       --shadow: 0 12px 35px rgba(0, 0, 0, .35);
+       --radius: 16px;
+       --transition: .30s ease;
+       --max-width: 1200px;
+   }
+   
+   a { text-decoration: none; color: inherit; }
+   img { max-width: 100%; display: block; }
+   ul { list-style: none; }
+   
+   .container { width: 90%; max-width: var(--max-width); margin: auto; }
+   
+   .btn-primary {
+       background: linear-gradient(90deg, #00C8FF, #009FE3);
+       padding: 16px 34px; border-radius: 12px; font-weight: 600;
+       transition: var(--transition); color: white; display: inline-block;
+   }
+   .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0, 200, 255, .25); }
+   
+   .btn-secondary {
+       border: 1px solid var(--border); padding: 16px 34px; border-radius: 12px;
+       transition: var(--transition); display: inline-block;
+   }
+   .btn-secondary:hover { border-color: var(--primary); color: var(--primary); }
+   
+   .text-center { text-align: center; }
+   
+   /* Header Global */
+   header {
+       width: 100%; position: fixed; top: 0; left: 0;
+       backdrop-filter: blur(14px); background: rgba(8, 18, 31, .75);
+       border-bottom: 1px solid rgba(255, 255, 255, .05); z-index: 999;
+   }
+   nav {
+       width: 90%; max-width: 1200px; margin: auto; height: 80px;
+       display: flex; justify-content: space-between; align-items: center;
+   }
+   .logo h1 { color: var(--primary); font-size: 2rem; font-weight: 700; }
+   nav ul { display: flex; gap: 35px; align-items: center; }
+   nav a { transition: var(--transition); }
+   nav a:hover { color: var(--primary); }
+   
+   @media (max-width: 900px) { nav ul { display: none; } }
