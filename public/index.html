@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conecta | Converse. Compartilhe. Conecte-se.</title>
+    <meta name="description" content="Conecta é um mensageiro web moderno desenvolvido com JavaScript e Firebase.">
+    <meta name="author" content="Marcelo José de Paula">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/home.css">
     <script type="module" src="./js/app.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav>
-            <div class="logo"><h1>Conecta</h1></div>
+            <div class="logo">
+                <h1>Conecta</h1>
+            </div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <ul>
-                <li><a href="#preview">Recursos</a></li>
-                <li><a href="#preview">Preview</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#sistema">Sistema</a></li>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="./pages/login.html">Entrar</a></li>
             </ul>
@@ -25,29 +38,34 @@
     </header>
 
     <main>
-        <!-- HERO COM PREVIEW DA INTERFACE -->
+        <!-- ===== HERO ===== -->
         <section id="hero">
             <div class="hero-content">
-                <span class="badge">Desenvolvido com JavaScript + Firebase</span>
+                <span class="badge">💬 Desenvolvido com JavaScript + Firebase</span>
                 <h2>Converse.<br>Compartilhe.<br>Conecte-se.</h2>
-                <p>O Conecta é um mensageiro web moderno, rápido e seguro, desenvolvido para proporcionar comunicação em tempo real com uma interface elegante e intuitiva.</p>
+                <p>
+                    O Conecta é um mensageiro web moderno, rápido e seguro,
+                    desenvolvido para proporcionar comunicação em tempo real
+                    com uma interface elegante e intuitiva.
+                </p>
                 <div class="hero-buttons">
                     <a href="./pages/register.html" class="btn-primary">Criar Conta</a>
                     <a href="./pages/login.html" class="btn-secondary">Entrar</a>
                 </div>
             </div>
             <div class="hero-image">
-                <!-- MOCKUP DO CHAT -->
-                <div class="preview-mockup">
+                <!-- ===== PREVIEW DA INTERFACE ===== -->
+                <div class="preview-interface">
                     <div class="preview-topbar">
                         <div class="window-controls">
-                            <span class="red"></span><span class="yellow"></span><span class="green"></span>
+                            <span class="red"></span>
+                            <span class="yellow"></span>
+                            <span class="green"></span>
                         </div>
                         <span class="app-title">Conecta</span>
                         <div class="topbar-icons">🔔 ⚙ 👤</div>
                     </div>
                     <div class="preview-body">
-                        <!-- Sidebar -->
                         <aside class="preview-sidebar">
                             <div class="preview-profile">
                                 <div class="profile-avatar">M</div>
@@ -60,50 +78,60 @@
                             <div class="preview-contacts">
                                 <div class="preview-contact active">
                                     <div class="avatar blue"></div>
-                                    <div class="info"><strong>João</strong><small>Até amanhã.</small></div>
+                                    <div class="info">
+                                        <strong>João</strong>
+                                        <small>Até amanhã.</small>
+                                    </div>
                                     <div class="status-dot online"></div>
                                 </div>
                                 <div class="preview-contact">
                                     <div class="avatar green"></div>
-                                    <div class="info"><strong>Ana</strong><small>Tudo certo.</small></div>
+                                    <div class="info">
+                                        <strong>Ana</strong>
+                                        <small>Tudo certo.</small>
+                                    </div>
                                     <div class="status-dot online"></div>
                                 </div>
                                 <div class="preview-contact">
                                     <div class="avatar orange"></div>
-                                    <div class="info"><strong>Pedro</strong><small>Vamos conversar.</small></div>
+                                    <div class="info">
+                                        <strong>Pedro</strong>
+                                        <small>Vamos conversar.</small>
+                                    </div>
                                     <div class="status-dot online"></div>
                                 </div>
                                 <div class="preview-contact">
                                     <div class="avatar purple"></div>
-                                    <div class="info"><strong>Julia</strong><small>Online</small></div>
+                                    <div class="info">
+                                        <strong>Julia</strong>
+                                        <small>Online</small>
+                                    </div>
                                     <div class="status-dot online"></div>
                                 </div>
                                 <div class="preview-contact">
                                     <div class="avatar blue"></div>
-                                    <div class="info"><strong>Carlos</strong><small>Offline</small></div>
+                                    <div class="info">
+                                        <strong>Carlos</strong>
+                                        <small>Offline</small>
+                                    </div>
                                     <div class="status-dot offline"></div>
-                                </div>
-                                <div class="preview-contact">
-                                    <div class="avatar green"></div>
-                                    <div class="info"><strong>Marina</strong><small>Online</small></div>
-                                    <div class="status-dot online"></div>
                                 </div>
                             </div>
                         </aside>
-                        <!-- Área de Conversa -->
                         <div class="preview-chat">
                             <div class="chat-header">
                                 <div class="avatar"></div>
-                                <div class="info"><strong>João</strong><span>Online agora</span></div>
+                                <div class="info">
+                                    <strong>João</strong>
+                                    <span>Online agora</span>
+                                </div>
                                 <div class="icons">📞 🎥 ⋮</div>
                             </div>
                             <div class="chat-messages">
                                 <div class="msg left">Olá Marcelo 👋</div>
                                 <div class="msg right">Tudo certo?</div>
-                                <div class="msg left">Estamos quase lançando o Conecta 🚀</div>
-                                <div class="msg right">A Landing está ficando muito boa.</div>
-                                <div class="msg left">Logo teremos login funcionando.</div>
-                                <div class="msg right">Mal posso esperar.</div>
+                                <div class="msg left">Estamos finalizando o Conecta 🚀</div>
+                                <div class="msg right">Ficou muito bonito!</div>
                             </div>
                             <div class="chat-input">
                                 <span>😊</span>
@@ -117,109 +145,158 @@
             </div>
         </section>
 
-        <!-- MOCKUP DO SISTEMA (DASHBOARD UNIFICADO EM UM ÚNICO CARD) -->
-        <section id="preview">
+        <!-- ===== RECURSOS ===== -->
+        <section id="recursos">
+            <h2>Recursos</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>💬 Chat em tempo real</h3>
+                    <p>Converse instantaneamente utilizando Firebase Firestore.</p>
+                </article>
+                <article class="card">
+                    <h3>👥 Amigos</h3>
+                    <p>Encontre pessoas e organize sua rede de contatos.</p>
+                </article>
+                <article class="card">
+                    <h3>🔒 Segurança</h3>
+                    <p>Login seguro utilizando Firebase Authentication.</p>
+                </article>
+                <article class="card">
+                    <h3>⚡ Alto desempenho</h3>
+                    <p>Interface leve, moderna e totalmente responsiva.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== MOCKUP DO SISTEMA ===== -->
+        <section id="sistema">
             <h2>Conheça o Conecta</h2>
-            <p class="subtitle">Um ambiente moderno para conversar, compartilhar ideias e manter contato com quem importa.</p>
+            <p class="subtitle">Um ambiente moderno para conversar, compartilhar ideias e manter contato com quem
+                importa.</p>
 
-            <div class="system-mockup-container">
-                <!-- Barra Superior -->
-                <div class="system-topbar">
-                    <div class="system-nav">
-                        <span>Dashboard</span>
-                        <span>Chat</span>
-                        <span>Perfil</span>
-                        <span>Configurações</span>
-                        <span>Ajuda</span>
-                    </div>
-                    <div class="system-icons">🔔 ⚙ 👤</div>
-                </div>
-
-                <!-- Estatísticas -->
-                <div class="system-stats">
-                    <div class="stat-card">
-                        <h3>💬 Conversas</h3>
-                        <div class="value">52</div>
-                        <span class="sub">mensagens · 12 online</span>
-                    </div>
-                    <div class="stat-card">
-                        <h3>👥 Amigos</h3>
-                        <div class="value">154</div>
-                        <span class="sub">contatos · 23 online</span>
-                    </div>
-                    <div class="stat-card">
-                        <h3>📁 Arquivos</h3>
-                        <div class="value">38</div>
-                        <span class="sub">compartilhados</span>
-                    </div>
-                    <div class="stat-card">
-                        <h3>🔒 Segurança</h3>
-                        <div class="sub" style="margin-top:10px; line-height:1.6;">Login protegido<br>Firebase Auth<br>Criptografia</div>
-                    </div>
-                </div>
-
-                <!-- Gráfico e Atividades -->
-                <div class="system-bottom">
-                    <div class="graph-card">
-                        <h3>📊 Estatísticas</h3>
-                        <div class="bars">
-                            <div style="height: 40%;" class="bar"><span class="bar-label">Seg</span></div>
-                            <div style="height: 70%;" class="bar"><span class="bar-label">Ter</span></div>
-                            <div style="height: 30%;" class="bar"><span class="bar-label">Qua</span></div>
-                            <div style="height: 80%;" class="bar"><span class="bar-label">Qui</span></div>
-                            <div style="height: 50%;" class="bar"><span class="bar-label">Sex</span></div>
-                            <div style="height: 60%;" class="bar"><span class="bar-label">Sab</span></div>
-                            <div style="height: 90%;" class="bar"><span class="bar-label">Dom</span></div>
+            <div class="system-preview">
+                <div class="system-dashboard">
+                    <!-- SIDEBAR -->
+                    <aside class="system-sidebar">
+                        <h2 class="system-logo">💬 Conecta</h2>
+                        <nav class="system-menu">
+                            <span class="active">🏠 Início</span>
+                            <span>💬 Conversas</span>
+                            <span>👥 Amigos</span>
+                            <span>📨 Solicitações <span class="badge-count">3</span></span>
+                            <span>🟢 Status</span>
+                            <span>🔔 Notificações <span class="badge-count">5</span></span>
+                            <span>📁 Arquivos</span>
+                            <span>⚙ Configurações</span>
+                            <span>🚪 Sair</span>
+                        </nav>
+                        <div class="system-user">
+                            <div class="user-avatar">M</div>
+                            <div>
+                                <strong>Marcelo</strong>
+                                <small>● Online</small>
+                            </div>
                         </div>
-                    </div>
-                    <div class="activity-card">
-                        <h3>🕐 Últimas atividades</h3>
-                        <div class="activity-list">
-                            <div class="activity-item"><span class="dot"></span><strong>João</strong> entrou</div>
-                            <div class="activity-item"><span class="dot"></span><strong>Ana</strong> enviou foto</div>
-                            <div class="activity-item"><span class="dot"></span><strong>Carlos</strong> aceitou amizade</div>
-                            <div class="activity-item"><span class="dot"></span><strong>Pedro</strong> ficou online</div>
-                        </div>
-                    </div>
-                </div>
+                    </aside>
 
-                <!-- Widgets -->
-                <div class="system-widgets">
-                    <div class="mini-widget">
-                        <div class="label">Espaço utilizado</div>
-                        <div class="val">72%</div>
-                        <div class="bar-progress"><div style="width: 72%;" class="fill"></div></div>
-                    </div>
-                    <div class="mini-widget">
-                        <div class="label">Mensagens hoje</div>
-                        <div class="val">158</div>
-                    </div>
-                    <div class="mini-widget">
-                        <div class="label">Amigos</div>
-                        <div class="val">124</div>
-                    </div>
-                </div>
+                    <!-- CONTEÚDO -->
+                    <main class="system-content">
+                        <!-- CARDS -->
+                        <section class="system-stats">
+                            <div class="stat-card">
+                                <h4>Conversas</h4>
+                                <strong>52</strong>
+                                <small>mensagens</small>
+                            </div>
+                            <div class="stat-card">
+                                <h4>Amigos</h4>
+                                <strong>154</strong>
+                                <small>contatos</small>
+                            </div>
+                            <div class="stat-card">
+                                <h4>Solicitações</h4>
+                                <strong>3</strong>
+                                <small>pendentes</small>
+                            </div>
+                            <div class="stat-card">
+                                <h4>Notificações</h4>
+                                <strong>5</strong>
+                                <small>não lidas</small>
+                            </div>
+                        </section>
 
-                <!-- Dispositivos -->
-                <div class="system-devices">
-                    <div class="device">
-                        <div class="icon">🖥️</div>
-                        <div class="info"><strong>Desktop</strong><span>Online · Chrome</span></div>
-                    </div>
-                    <div class="device">
-                        <div class="icon">📱</div>
-                        <div class="info"><strong>Android</strong><span>Sincronizado</span></div>
-                    </div>
+                        <!-- GRID -->
+                        <section class="system-grid">
+                            <article class="panel">
+                                <h3>Conversas recentes</h3>
+                                <ul>
+                                    <li>João <span>10:32</span></li>
+                                    <li>Ana <span>10:28</span></li>
+                                    <li>Pedro <span>10:21</span></li>
+                                    <li>Julia <span>10:18</span></li>
+                                </ul>
+                            </article>
+
+                            <article class="panel">
+                                <h3>Solicitações</h3>
+                                <ul>
+                                    <li>Maria <span class="action-btns">✔ ✖</span></li>
+                                    <li>José <span class="action-btns">✔ ✖</span></li>
+                                    <li>Lucas <span class="action-btns">✔ ✖</span></li>
+                                </ul>
+                            </article>
+
+                            <article class="panel">
+                                <h3>Status</h3>
+                                <ul>
+                                    <li>🟢 Online</li>
+                                    <li>🟡 Ausente</li>
+                                    <li>🔴 Ocupado</li>
+                                </ul>
+                            </article>
+
+                            <article class="panel">
+                                <h3>Arquivos</h3>
+                                <ul>
+                                    <li>📄 foto.png</li>
+                                    <li>🎬 video.mp4</li>
+                                    <li>📑 documento.pdf</li>
+                                </ul>
+                            </article>
+
+                            <article class="panel">
+                                <h3>Dispositivos</h3>
+                                <ul>
+                                    <li>🖥 Desktop</li>
+                                    <li>📱 Android</li>
+                                    <li>🌐 Web</li>
+                                </ul>
+                            </article>
+
+                            <article class="panel">
+                                <h3>Segurança</h3>
+                                <ul>
+                                    <li>🔒 Autenticação</li>
+                                    <li>🔑 Criptografia</li>
+                                    <li>☁ Firebase</li>
+                                </ul>
+                            </article>
+                        </section>
+                    </main>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÕES FINAIS (Centralizado, sem card) -->
+        <!-- ===== SOBRE ===== -->
         <section id="sobre">
             <h2>Sobre o Projeto</h2>
-            <p>O Conecta é um projeto desenvolvido para demonstrar conhecimentos em JavaScript, Firebase, HTML, CSS e desenvolvimento de aplicações web.</p>
+            <p>
+                O Conecta é um projeto desenvolvido para demonstrar conhecimentos em
+                JavaScript, Firebase, HTML, CSS e desenvolvimento de aplicações web.
+            </p>
         </section>
 
+        <!-- ===== CTA ===== -->
         <section id="cta">
             <h2>Pronto para começar?</h2>
             <p>Crie sua conta gratuitamente e faça parte da comunidade Conecta.</p>
@@ -232,4 +309,5 @@
         <p>Desenvolvido por Marcelo José de Paula.</p>
     </footer>
 </body>
+
 </html>
